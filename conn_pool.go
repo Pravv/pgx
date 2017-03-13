@@ -421,7 +421,7 @@ func (r *Row) ScanAny(dest interface{}) error {
 
     fields := m.TraversalsByName(v.Type(), columns)
     values := make([]interface{}, len(r.fields))
-
+    // int uint16 string
     err := utils.FieldsByTraversal(v, fields, values, true)
     if err != nil {
         return err

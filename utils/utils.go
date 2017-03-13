@@ -11,9 +11,9 @@ import (
 var _scannerInterface = reflect.TypeOf((*sql.Scanner)(nil)).Elem()
 
 func IsScannable(t reflect.Type) bool {
-    if reflect.PtrTo(t).Implements(_scannerInterface) {
-        return true
-    }
+   // if reflect.PtrTo(t).Implements(_scannerInterface) {
+  // //     return true
+   // }
     if t.Kind() != reflect.Struct {
         return true
     }
